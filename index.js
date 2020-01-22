@@ -1,10 +1,7 @@
 // Write your solution in this file!
 const driver = {};
 function updateDriverWithKeyAndValue(driver, key, value) {
-  const driver1 = { ...driver };
-  driver1.name="Sam";
-  driver1.address = "11 Broadway"
-  return driver1;
+  return Object.assign({}, driver, { [key]: value });
 };
 
 function destructivelyUpdateDriverWithKeyAndValue(obj, key, value) {
