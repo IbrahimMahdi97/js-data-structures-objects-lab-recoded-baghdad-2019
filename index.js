@@ -18,5 +18,9 @@ function deleteFromDriverByKey(driver, key) {
   return newObj;
 }
 
-const driver2 = {};
-destructivelyUpdateDriverWithKeyAndValue (driver, 'address', '12 Broadway');
+
+destructivelyUpdateDriverWithKeyAndValue (driver, key) {
+  delete driver[key];
+
+  return driver;
+};
